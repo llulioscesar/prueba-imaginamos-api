@@ -1,6 +1,6 @@
 import {ApiProperty} from '@nestjs/swagger';
 
-export class CrearClienteDto {
+export class CrearDriverDto {
 
     @ApiProperty()
     readonly nombre: string;
@@ -8,9 +8,6 @@ export class CrearClienteDto {
     @ApiProperty()
     readonly apellido: string;
 
-    @ApiProperty()
-    readonly correo: string;
-
-    @ApiProperty({required: false})
-    readonly telefono: string;
+    @ApiProperty({required: false, default: true})
+    readonly activo: boolean;
 }

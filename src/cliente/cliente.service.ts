@@ -6,6 +6,7 @@ import {CrearClienteDto} from './dto/crear-cliente-dto';
 
 @Injectable()
 export class ClienteService {
+
     constructor(
         @InjectRepository(Cliente)
         private readonly clienteRepositorio: Repository<Cliente>,
@@ -27,5 +28,12 @@ export class ClienteService {
         clienteActualizar.correo = cliente.correo;
         clienteActualizar.telefono = cliente.telefono;
         return await this.clienteRepositorio.save(clienteActualizar);
+    }
+
+    async buscarPorCorreo(correo: string): Promise<Cliente> {
+        return await this.clienteRepositorio.findOne({
+            where: {correo},
+            relations: ['direcciones'],
+        });
     }
 }

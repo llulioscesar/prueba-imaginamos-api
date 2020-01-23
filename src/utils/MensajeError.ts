@@ -1,7 +1,14 @@
+import {ApiProperty} from '@nestjs/swagger';
+
 export class MensajeError {
 
+    @ApiProperty({required: false})
     private mensaje: string
+
+    @ApiProperty()
     private codigo: string | number;
+
+    @ApiProperty()
     private causa: string;
 
     constructor(error: any) {
