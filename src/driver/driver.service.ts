@@ -28,4 +28,18 @@ export class DriverService {
         return await this.driverRepositorio.save(driverActualizar);
     }
 
+    async consultarIdFecha(id: string, fecha: string): Promise<Driver> {
+        return await this.driverRepositorio.findOne({
+            where: {
+                id,
+                'pedidos.entregado': false,
+            },
+            relations: ['pedidos', 'pedidos.direccion', 'pedidos.direccion.cliente'],
+        });
+    }
+
+    async listar(): Promise<Driver[]> {
+        return await this.driverRepositorio.find();
+    }
+
 }

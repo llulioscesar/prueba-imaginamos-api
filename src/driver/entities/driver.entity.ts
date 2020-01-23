@@ -1,5 +1,6 @@
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {ApiProperty} from '@nestjs/swagger';
+import {Pedido} from '../../pedido/entities/pedido.entity';
 
 @Entity()
 export class Driver {
@@ -19,5 +20,9 @@ export class Driver {
     @Column({default: true, nullable: false, type: 'bool'})
     @ApiProperty({nullable: false, required: false, default: true})
     activo: boolean;
+
+    @OneToMany(type => Pedido, pedido => pedido.driver)
+    @ApiProperty({nullable: true, required: false})
+    pedidos: Pedido[];
 
 }

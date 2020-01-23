@@ -1,5 +1,10 @@
+import {ApiProperty} from '@nestjs/swagger';
+
 export class CrearPedidoDto {
+
+    @ApiProperty()
     readonly direccionId: string;
-    readonly driverId: string;
+
+    @ApiProperty()
     readonly fechaEntrega: string;
 }
