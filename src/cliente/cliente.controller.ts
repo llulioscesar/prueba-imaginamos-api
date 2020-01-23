@@ -10,6 +10,6 @@ export class ClienteController {
 
     @Put(':id')
     actualizar(@Body() actualizarClienteDto: CrearClienteDto) {
-        return 'Cliente actualizado';
+        return 'ClienteEntity actualizado';
     }
 }
