@@ -33,6 +33,14 @@
 ```bash
 $ npm install
 ```
+## modelo de datos
+
+imagen en el repositorio `modelo.png`
+
+## Swagger
+
+`/documentacion`
+[Url](http://localhost:3000/documentacion) 
 
 ## Running the app
 
