@@ -33,6 +33,20 @@
 ```bash
 $ npm install
 ```
+
+## Variables de entorno `.env`
+
+```
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=1234
+POSTGRES_DATABASE=prueba
+PORT=3000
+MODE=DEV
+RUN_MIGRATIONS=true
+```
+
 ## modelo de datos
 
 imagen en el repositorio `modelo.png`
