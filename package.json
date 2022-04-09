@@ -27,7 +27,7 @@
     "@nestjs/swagger": "^4.1.15",
     "@nestjs/typeorm": "^6.2.0",
     "dotenv": "^8.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "pg": "^7.17.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
